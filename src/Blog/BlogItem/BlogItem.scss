@@ -1,0 +1,54 @@
+@import '../../common';
+
+.blog-item{
+    width: 100%;
+    background: $sec-bg;
+    &:hover{
+        img{
+            transform: scale(1.2);
+        }
+    }
+    .item-container{
+        padding: 15px;
+        overflow: hidden;
+        cursor: pointer;
+        .thumbnail-wrapper{
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            img{
+                width: 100%;
+                max-height: 100%;
+                transition: all 1s ease-out;
+                z-index: -1;
+            }
+            .date-wrapper{
+                position: absolute;
+                top: 25px;
+                left: 25px;
+                background: $com-color;
+                padding: 10px;
+                color: $sec-color;
+                text-align: center;
+                .day{
+                    line-height: 1.7rem;
+                    font-size: 2.2rem;
+                }
+                .month{
+                    line-height: 1.7rem;
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        .title{
+            margin-top: 15px;
+            font-size: 1.5rem;
+            transition: all 1s ease-out;
+            &:hover{
+                color: $com-color;
+            }
+        }
+    }
+}

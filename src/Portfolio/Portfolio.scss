@@ -1,0 +1,21 @@
+@import '../common';
+
+
+.portfolio{
+    width: 100%;
+    padding: 0 15px;
+    .portfolios-wrapper{
+        width: 100%;
+        @media (min-width: 600px) {
+            display:grid;
+            grid-template-columns: auto auto;
+            grid-gap: 15px;
+        }
+        @media (min-width: 1150px) {
+            display:grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 15px;
+        }
+        
+    }
+}

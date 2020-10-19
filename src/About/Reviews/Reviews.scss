@@ -1,0 +1,36 @@
+@import '../../common';
+.reviews{
+    width: 100%;
+    margin:0 15px;
+    &:first-child{
+        margin-left: 0;
+    }
+    .reviews-wrapper{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .test-monial-wrapper{
+            background: $sec-bg;
+            border-left: 5px solid $ter-bg;
+            position: relative;
+            .testmonial{
+                padding: 20px;
+            }
+            .indicator{
+                position: absolute;
+                border: 15px solid;
+                border-color: $sec-bg transparent transparent $sec-bg;
+                left: 5%;
+            }
+        }
+        .client-identity{
+            margin-top: 30px;
+            .name{
+                color: $sec-color;
+            }
+            .designation{
+                font-size: 1rem;
+            }
+        }
+    }
+}

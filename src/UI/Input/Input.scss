@@ -1,0 +1,63 @@
+@import '../../common';
+
+
+.input-field{
+    margin: 15px 0;
+    font-weight: 300;
+    position: relative;
+    
+    
+    input{
+        width: 100%;
+        background: transparent;
+        padding: 10px 15px;
+        font-size: 1rem;
+        color: $pri-color;
+        border: 1px solid $ter-bg;
+        font-family: inherit;
+        letter-spacing: 1px;
+        &:focus ~ .label{
+            top: 0;
+            background: $pri-bg;
+        }
+        
+    }
+    .label{
+        position: absolute;
+        font-size: 0.7rem;
+        font-weight: 500;
+        left: 15px;
+        top: 50%;
+        padding: 0 5px;
+        transform: translateY(-50%);
+        transition: all 500ms ease-out;
+    }
+    textarea{
+        width: 100%;
+        max-width: 100%;
+        background: transparent;
+        border: none;
+        padding: 10px 15px;
+        color: $pri-color;
+        border: 1px solid $ter-bg;
+        font-family: inherit;
+        letter-spacing: 1px;
+        &:focus ~ .label{
+            top: 0;
+            background: $pri-bg;
+        }
+    }
+    textarea ~ .label{
+        top: 20%;
+    }
+}
+.input-label-shrink{
+    top: 0;
+    background: $pri-bg;
+    position: absolute;
+    font-size: 0.7rem;
+    left: 15px;
+    padding: 0 5px;
+    transform: translateY(-50%);
+    transition: all 500ms ease-out;
+}

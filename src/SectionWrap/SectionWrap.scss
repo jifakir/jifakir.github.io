@@ -1,0 +1,51 @@
+@import '../common';
+.sec-wrapper{
+    padding: 7rem 0;
+    font-family: $pri-font;
+    .sec-title-wrapper{
+        // margin-top: 6rem;
+        .sec-title{
+            font-size: 2.6rem;
+            text-transform: uppercase;
+            color: $sec-color;
+            position: relative;
+            padding-bottom: 1rem;
+            transition: all 5s ease-out;
+            &::before{
+                position: absolute;
+                content: '';
+                height: 0.3rem;
+                width: 7rem;
+                bottom: 0;
+                left: 0;
+                background: rgba($com-color, $alpha: 0.3);
+                border-radius: 5px;
+            }
+            &::after{
+                position: absolute;
+                content: '';
+                height: 0.3rem;
+                width: 2rem;
+                bottom: 0;
+                left: 0;
+                background: $com-color;
+                border-radius: 5px;
+            }
+            .title-shadow{
+                position: absolute;
+                left: 0;
+                top: 1.6rem;
+                font-size: 4.5rem;
+                font-weight: bolder;
+                letter-spacing: 1px;
+                color: rgba($color: $sec-bg, $alpha: 0.5);
+                z-index: -1;
+            }
+        }
+    }
+
+    .sec-body{
+        margin-top: 3.5rem;
+        width: 100%;
+    }
+}

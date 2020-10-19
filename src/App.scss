@@ -1,0 +1,70 @@
+@import './common';
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px $com-color; 
+  border-radius: 10px;
+  background: $ter-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: $com-color;
+  box-shadow: inset 0 0 6px $com-color; 
+}
+
+body{
+  background: $pri-bg;
+  overflow-x: hidden;
+}
+.Portfolio{
+  width: calc(100vw - 250px);
+  margin-left: 250px;
+  min-height: 100vh;
+  color: $pri-color;
+  position: relative;
+  
+  @media (max-width:900px) {
+    width: 100%;
+    margin-left: 0;
+  }
+  .bg-lines{
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    left: 0;
+    top: 0;
+    span{
+      width: 1px;
+      top: 0;
+      left: 0;
+      position: absolute;
+      height: 100%;
+      display: block;
+      background: $sec-bg;
+      &:nth-child(1) {
+        left: 20%;
+      }
+      &:nth-child(2) {
+        left: 40%;
+      }
+      &:nth-child(3) {
+        left: 60%;
+      }
+      &:nth-child(4) {
+        left: 80%;
+      }
+    }
+  }
+}

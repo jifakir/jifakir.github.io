@@ -1,0 +1,32 @@
+@import '../../common';
+
+
+.btn-wrapper{
+    .button{
+        height: 100%;
+        background: $com-color;
+        position: relative;
+        border: none;
+        padding: 10px 15px;
+        font-size: 0.8rem;
+        color: $sec-color;
+        letter-spacing: 1px;
+        cursor: pointer;
+        text-transform: uppercase;
+        &:hover{
+            &::before{
+                width: 100%;
+            }
+        }
+        &::before{
+            position: absolute;
+            content: '';
+            transition: all 400ms ease-out;
+            width: 0;
+            height: 2px;
+            background: $sec-color;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}

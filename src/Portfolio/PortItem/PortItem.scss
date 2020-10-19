@@ -1,0 +1,89 @@
+@import '../../common';
+
+
+.port-item{
+    width: 100%;
+    @media (max-width: 600px) {
+        margin-bottom: 25px;
+    }
+    .port-screenshot{
+        width: 100%;
+        height: 250px;
+        position: relative;
+        &::after{
+            position: absolute;
+            content: '';
+            width: 0px;
+            height: calc(100% - 30px);
+            background: rgba($color: $sec-color, $alpha: 0.7);
+            left: 15px;
+            top: 15px;
+            z-index: 1;
+            transition: width 500ms ease-out;
+        }
+        
+        .screenshot-wrapper{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .icons-group{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            z-index: 10;
+            opacity: 0;
+            transition: all 500ms ease-out;
+            
+            .icon-wrapper{
+                width: 50px;
+                height: 50px;
+                border-radius:50%;
+                color: $sec-color;
+                font-size: 1.5rem;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: $pri-color;
+                transition: all 300ms ease-out;
+                &:first-child{
+                    margin-right: 10px;
+                }
+                &:hover{
+                    background: $com-color;
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    &:hover{
+        .port-screenshot{
+            .icons-group{
+                bottom: 35%;
+                opacity: 1;
+            }
+            &::after{
+                width: calc(100% - 30px)
+            }
+        }
+    }
+
+    .title{
+        color: $sec-color;
+        margin: 7px 0;
+        cursor: pointer;
+        transition: all 1s ease-in-out;
+        &:hover{
+            color: $com-color;
+        }
+    }
+    
+}

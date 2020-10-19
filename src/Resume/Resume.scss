@@ -1,0 +1,53 @@
+@import '../common';
+
+
+.resume {
+    width: 100%;
+    padding: 0 15px;
+    transition: all 5s ease-out;
+}
+.skills-wrapper{
+    width: 100%;
+    
+    @media (min-width:900px) {
+        display: grid;
+        grid-template-columns: 49% 49%;
+        grid-gap: 25px 15px;
+    }
+}
+.work-experience{
+    .work-title{
+        display: flex;
+        align-items: center;
+    }
+    .icon-wrapper{
+        font-size: 1.5rem;  
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+    }
+    .title{
+        
+    }
+}
+.work-timeline{
+    transition: all 5s ease-in-out;
+    margin-top: 50px;
+}
+.education-qualification{
+    transition: all 5s ease-in-out;
+    .qualification-title{
+        display: flex;
+        align-items: center;
+        margin: 25px 0;
+    }
+    .icon-wrapper{
+        font-size: 1.5rem;
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+    }
+    .title{
+        
+    }
+}

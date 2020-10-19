@@ -1,0 +1,14 @@
+@import '../../common';
+.toggle-btn{
+    background: $sec-bg;
+    border: 1px solid $ter-bg;
+    box-shadow: 1px 0 5px #000;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+    @media (min-width: 900px) {
+        display: none;
+    }
+    .icon{
+        font-size: 2rem;
+    }
+}

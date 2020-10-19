@@ -1,0 +1,12 @@
+.blog{
+    width: 100%;
+    padding: 0 25px;
+}
+.blogs-wrapper{
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 15px;
+    @media (min-width: 500px) {
+        grid-template-columns: auto auto;
+    }
+}

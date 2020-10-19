@@ -1,0 +1,31 @@
+@import '../common';
+
+
+.contact{
+    width: 100%;
+    padding: 0 25px;
+    .contact-wrapper{
+        width: 100%;
+        @media (min-width: 900px) {
+            display: flex;
+            .left-column{
+                margin-bottom: 0;
+            }
+        }
+        .left-column{
+            margin-right: 15px;
+            width: 100%;
+            margin-bottom: 50px;
+            .title{
+            color: $sec-color;
+            }
+            .contact-form{
+                width: 100%;
+            }
+        }
+        .right-column{
+            width: 100%;
+
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@import '../common';
+
+.about{
+    width: 100%;
+    padding: 0 1rem;
+}
+.services-wrapper{
+    width: 100%;
+    display: flex;
+    &:first-child{
+        margin-left: none;
+    }
+    &:last-child{
+        margin-right: none;
+    }
+}
+.reviews-wrapper{
+    display: flex;
+}
