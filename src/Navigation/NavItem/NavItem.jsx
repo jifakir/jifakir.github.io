@@ -11,7 +11,7 @@ export default ({name, clicked}) => {
         <Fragment >
             <li key={name} className='nav-item' onClick={clicked}>
                 <NavLink 
-                to={name} 
+                to={name === 'home'?'/':name} 
                 className={location.pathname === `/${name}`?'nav-link':'nav-link not-active'} 
                 activeClassName='active'>
                     {name}

@@ -21,7 +21,7 @@ function App() {
           <span></span>
         </div>
         <Navigation />
-        <Route path='/home'  >
+        <Route path='/'  exact>
           <Home />
         </Route>
         <Route path='/about' exact >
