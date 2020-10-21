@@ -43,7 +43,7 @@ export default () => {
                     <div className="education-qualification">
                         <div className="qualification-title">
                             <div className="icon-wrapper">
-                                <BiBook />
+                                <BiBook />  
                             </div>
                             <h1 className="title">
                                 Educational Qualification
