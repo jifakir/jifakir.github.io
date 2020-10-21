@@ -3,10 +3,10 @@ import React from 'react';
 import './SectionWrap.scss';
 
 
-export default ({title, children}) => {
+export default ({title, children, styles}) => {
 
     return (
-        <div className="sec-wrapper">
+        <div className="sec-wrapper" style={styles}>
             <div className="sec-title-wrapper">
                 <h1 className="sec-title">
                     {title}

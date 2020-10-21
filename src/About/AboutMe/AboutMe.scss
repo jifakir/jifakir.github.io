@@ -2,11 +2,13 @@
 
 .about-me {
     width: 100%;
-    display: flex;
-    flex-direction: row;
+    @media (min-width: 900px){
+        display: flex;
+        flex-direction: row;
+    }
     .image-wrapper{
         flex: 50%;
-        margin-right: 5px;
+        margin-bottom: 25px;
         position: relative;
         img{
             max-width: 100%;
@@ -44,6 +46,7 @@
             font-size: 1.2rem;
         }
         .full-bio{
+            margin-bottom: 15px;
             p{
                 font-family: $pri-font;
                 line-height: 2.5rem;

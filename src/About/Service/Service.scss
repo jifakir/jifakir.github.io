@@ -2,14 +2,17 @@
 .service{
     border: 2px solid $ter-bg;
     border-top: 5px solid $ter-bg;
-    margin: 0 10px;
+    margin-bottom: 15px;
     background: $sec-bg;
     transition: all 500ms ease-in-out;
     &:hover{
         border-top-color: $com-color;
     }
-    &:first-child{
-        margin-left: 0;
+    @media (min-width: 900px){
+        margin: 0 10px;
+        &:first-child{
+            margin-left: 0;
+        }
     }
     .service-wrapper{
         padding: 25px;

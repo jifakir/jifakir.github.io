@@ -1,7 +1,8 @@
 import React from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {HashRouter as Router, Redirect, Route, Switch} from 'react-router-dom';
 import About from './About/About';
 import './App.scss';
+import BgLines from './BgLines/BgLines';
 import Blog from './Blog/Blog';
 import Contact from './Contact/Contact';
 import Home from './Home/Home';
@@ -13,32 +14,29 @@ function App() {
   return (
     <Router>
       <div className="Portfolio">
-        <div className="bg-lines">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <BgLines/>
         <Navigation />
-        <Route path='/'  exact>
-          <Home />
-        </Route>
-        <Route path='/about' exact >
-          <About />
-        </Route>
-        <Route path='/resume'  exact>
-          <Resume />
-        </Route>
-        <Route path='/portfolio' exact>
-          <Portfolio />
-        </Route>
-        <Route path='/blogs' exact>
-          <Blog />
-        </Route>
-        <Route path='/contact' exact>
-          <Contact />
-        </Route>
+        <Switch>
+          <Route path='/home'  exact>
+            <Home />
+          </Route>
+          <Route path='/about' exact >
+            <About />
+          </Route>
+          <Route path='/resume'  exact>
+            <Resume />
+          </Route>
+          <Route path='/portfolio' exact>
+            <Portfolio />
+          </Route>
+          <Route path='/blogs' exact>
+            <Blog />
+          </Route>
+          <Route path='/contact' exact>
+            <Contact />
+          </Route>
+          <Redirect to='/home' />
+        </Switch>
       </div>
     </Router>
   );

@@ -12,7 +12,7 @@ export default () => {
 
     return(
         <div className="resume">
-            <SectionWrap title='Skills'>
+            <SectionWrap title='Skills' styles={{paddingBottom:0}}>
                 <div className="skills-wrapper">
                     <Skill title='HTML' percent='90%' />
                     <Skill title='CSS' percent='95%' />
@@ -46,7 +46,7 @@ export default () => {
                                 <BiBook />
                             </div>
                             <h1 className="title">
-                                Work Experience
+                                Educational Qualification
                             </h1>
                         </div>
                         <div className="education-timeline">

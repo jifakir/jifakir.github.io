@@ -12,10 +12,10 @@ export default () => {
 
     return (
         <div className="about">
-            <SectionWrap title='About Me'>
+            <SectionWrap title='About Me' styles={{paddingBottom:0}}>
                 <AboutMe />
             </SectionWrap>
-            <SectionWrap title='Services'>
+            <SectionWrap title='Services' styles={{paddingBottom:0}}>
                 <div className="services-wrapper">
                     <Service />
                     <Service />

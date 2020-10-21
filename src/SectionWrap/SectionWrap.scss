@@ -34,12 +34,16 @@
             .title-shadow{
                 position: absolute;
                 left: 0;
-                top: 1.6rem;
-                font-size: 4.5rem;
+                top: 2.2rem;
+                font-size: 4rem;
                 font-weight: bolder;
                 letter-spacing: 1px;
                 color: rgba($color: $sec-bg, $alpha: 0.5);
                 z-index: -1;
+                @media (min-width: 900px){
+                    top: 1.6rem;
+                    font-size: 4.5rem;
+                }
             }
         }
     }

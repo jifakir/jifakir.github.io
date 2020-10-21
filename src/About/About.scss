@@ -7,13 +7,9 @@
 .services-wrapper{
     width: 100%;
     display: flex;
-    &:first-child{
-        margin-left: none;
-    }
-    &:last-child{
-        margin-right: none;
-    }
+    flex-direction: column;
 }
 .reviews-wrapper{
     display: flex;
+    flex-direction: column;
 }
