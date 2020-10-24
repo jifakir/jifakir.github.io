@@ -25,6 +25,8 @@
 body{
   background: $pri-bg;
   overflow-x: hidden;
+  scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
 }
 .Portfolio{
   width: calc(100vw - 250px);
@@ -32,6 +34,7 @@ body{
   min-height: 100vh;
   color: $pri-color;
   position: relative;
+  
   
   @media (max-width:900px) {
     width: 100%;
