@@ -6,9 +6,9 @@ import './Input.scss';
 
 export default ({inputName, ctg, type, changed, inputValue, tab}) => {
 
-    const input = (<input onChange={changed} tabIndex={tab} name={inputName.toLowerCase()} type={type} required />);
+    const input = (<input onChange={changed} value={inputValue} tabIndex={tab} name={inputName.toLowerCase()} type={type} required />);
     
-    const textarea = (<textarea onChange={changed} tabIndex={tab} name={inputName} id="text-area" cols="1" rows="5"></textarea>)
+    const textarea = (<textarea onChange={changed} value={inputValue} tabIndex={tab} name={inputName} id="text-area" cols="1" rows="5"></textarea>)
 
     return(
         <div className="input-field">

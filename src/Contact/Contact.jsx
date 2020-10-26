@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import emailjs from 'emailjs-com';
+import apiKeys from './apiKeys'; 
 import { FaMobileAlt } from 'react-icons/fa';
 import { AiOutlineMail } from 'react-icons/ai';
 import { MdLocationOn } from 'react-icons/md';
@@ -25,7 +27,20 @@ export default () => {
     }
     const onSubmitHandler = (e) => {
         e.preventDefault();
-        console.log(state);
+        const templateParams = {
+            'from_name': state.name,
+            'message': `name: ${state.name} mobile: ${state.number} email: ${state.email} message: ${state.comment}`
+        };
+        emailjs.send(apiKeys.service_id, apiKeys.template_id, templateParams, apiKeys.user_id)
+        .then((res) => res)
+        .then((error) => error);
+        console.log(state.comment)
+        setState((prevState) => ({
+            name:'',
+            number:'',
+            email:'',
+            comment:''
+        }));
     }   
     return (
         <div className="contact">
