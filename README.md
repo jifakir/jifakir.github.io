@@ -2,4 +2,5 @@
 
 You can use the portfolio page for yourself. To use you should clone the repo:
 then providing 
-# "npm install or yarn install" command is must to install dependency.
+# "npm install or yarn install" 
+command is must to install dependency.
