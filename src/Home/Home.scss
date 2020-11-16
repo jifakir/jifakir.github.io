@@ -3,57 +3,69 @@
     width: 100%;
     min-height: 100vh;
     height: 100vh;
-    display: flex;
-    padding: 3rem;
+    // display: flex;
+    // padding: 3rem;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-family: $pri-font;
     @media (min-width:650px) {
-        padding:10rem
+        // padding:10rem
     }
-    .title{
-        color: $sec-color;
-        font-size: 3rem;
-        .designing-name{
-            color: $com-color;
-        }
-    }
-    .sub-title{
-        color: $pri-color;
-        font-size: 1.2rem;
-        padding: 25px 0;
-        line-height: 2rem;
-        font-family: $pri-font;
-        letter-spacing: 1px;
-    }
-    .icon-wrapper{
+    .particles{
         width: 100%;
-        color: $pri-color;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        .icon{
-            width: 2rem;
-            height: 2rem;
-            border-radius: 50%;
-            border: 1px solid $pri-color;
-            display: flex;
-            margin:0 1rem;
-            cursor: pointer;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            a{
-                text-decoration: none;
-                color: inherit;
-                display: flex;
-            }
-            &:hover{
+        height: 100%;
+    }
+    .home-wrapper{
+        position: absolute;
+        width: 70%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+        .title{
+            color: $sec-color;
+            font-size: 3rem;
+            .designing-name{
                 color: $com-color;
-                border-color: $com-color;
             }
         }
-        
+        .sub-title{
+            color: $pri-color;
+            font-size: 1.2rem;
+            padding: 25px 0;
+            line-height: 2rem;
+            font-family: $pri-font;
+            letter-spacing: 1px;
+        }
+        .icon-wrapper{
+            width: 100%;
+            color: $pri-color;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            .icon{
+                width: 2rem;
+                height: 2rem;
+                border-radius: 50%;
+                border: 1px solid $pri-color;
+                display: flex;
+                margin:0 1rem;
+                cursor: pointer;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                a{
+                    text-decoration: none;
+                    color: inherit;
+                    display: flex;
+                }
+                &:hover{
+                    color: $com-color;
+                    border-color: $com-color;
+                }
+            }
+            
+        }
     }
 }
