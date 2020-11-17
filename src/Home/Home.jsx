@@ -58,17 +58,17 @@ export default () => {
                 <p className="sub-title">{home.bio}</p>
                 <div className="icon-wrapper">
                     <div className="icon">
-                        <a href='http://www.facebook.com' >
+                        <a target="_blank" rel='noopener noreferrer' href='https://www.facebook.com/jifakir' >
                             <FaFacebookF />
                         </a>
                     </div>
                     <div className="icon">
-                        <a href='http://www.facebook.com' >
+                        <a target="_blank" rel='noopener noreferrer' href='https://twitter.com/jifakir' >
                             <FaTwitter />
                         </a>
                     </div>
                     <div className="icon">
-                        <a target="_blank"  href='https://github.com/jifakir' >
+                        <a target="_blank" rel='noopener noreferrer'  href='https://github.com/jifakir' >
                             <FaGithub />
                         </a>
                     </div>
