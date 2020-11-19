@@ -23,27 +23,27 @@ export default () => {
                     </p>
                     <p>
                         <span className="heading">
-                            Full Name
+                            Village
                         </span>
-                    Jahidul Islam Fakir
+                    Rajoir
                     </p>
                     <p>
                         <span className="heading">
-                            Full Name
+                            Police Station
                         </span>
-                    Jahidul Islam Fakir
+                    Rayenda
                     </p>
                     <p>
                         <span className="heading">
-                            Full Name
+                            District
                         </span>
-                    Jahidul Islam Fakir
+                    Bagerhat-9330
                     </p>
                     <p>
                         <span className="heading">
-                            Full Name
+                            Profession
                         </span>
-                    Jahidul Islam Fakir
+                    Student
                     </p>
                 </div>
                 <Button btnName='Download CV' />
