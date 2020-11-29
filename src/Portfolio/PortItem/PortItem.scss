@@ -15,7 +15,7 @@
             content: '';
             width: 0px;
             height: calc(100% - 30px);
-            background: rgba($color: $sec-color, $alpha: 0.7);
+            background: rgba($color: $sec-color, $alpha: 0.5);
             left: 15px;
             top: 15px;
             z-index: 1;
@@ -53,6 +53,13 @@
                 align-items: center;
                 background: $pri-color;
                 transition: all 300ms ease-out;
+                a{
+                    text-decoration: none;
+                    color: inherit;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
                 &:first-child{
                     margin-right: 10px;
                 }

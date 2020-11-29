@@ -6,17 +6,19 @@ import './PortItem.scss';
 
 
 
-export default () => {
+export default ({src, title, subtitle, projectLink}) => {
 
     return(
-        <div className="port-item">
+        <div className="port-item" >
             <div className="port-screenshot">
                 <div className="screenshot-wrapper">
-                    <img src="http://chester.nuclearthemes.com/images/portfolio-image-1.jpg" alt="Screenshot"/>
+                    <img src={src} alt="Screenshot"/>
                 </div>
                 <div className="icons-group">
                     <div className="icon-wrapper">
-                        <MdZoomIn />
+                        <a href={projectLink} target='_blank' rel='noopener noreferrer'>
+                            <MdZoomIn />
+                        </a>
                     </div>
                     <div className="icon-wrapper">
                         <FiLink />
@@ -25,10 +27,10 @@ export default () => {
 
             </div>
             <h1 className="title">
-                Coffee Mug
+                {title}
             </h1>
             <h3 className="subtitle">
-                Awesome Coffee Mug Desgin
+                {subtitle}
             </h3>
         </div>
     )

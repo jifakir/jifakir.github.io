@@ -7,7 +7,7 @@ export default () => {
     return (
         <div className="about-me">
            <div className="image-wrapper">
-               <img src="http://chester.nuclearthemes.com/images/about-image.jpg" alt="CoverPhoto"/>
+               <img src="https://scontent.fjsr5-1.fna.fbcdn.net/v/t1.0-9/20031885_1903996583171931_4879815851320476666_n.jpg?_nc_cat=104&ccb=2&_nc_sid=19026a&_nc_ohc=K23OuJdAgVEAX-H5RWn&_nc_ht=scontent.fjsr5-1.fna&oh=9301feda1bd2cb9a3a4a2118ce2009c7&oe=5FE8362D" alt="CoverPhoto"/>
            </div>
            <div className="bio-wrapper">
                <h1 className="title">I am <span className='name'>JI Fakir</span></h1>
@@ -43,7 +43,7 @@ export default () => {
                         <span className="heading">
                             Profession
                         </span>
-                    Student
+                    Front-end-developer
                     </p>
                 </div>
                 <Button btnName='Download CV' />
