@@ -1,6 +1,6 @@
 import React from 'react';
-
 import './Service.scss';
+import ServiceItem from './ServiceItem/ServiceItem';
 
 
 
@@ -8,19 +8,10 @@ export default () => {
 
     return(
         <div className="service">
-            <div className="service-wrapper">
-                <div className="icon-wrapper">
-                    icon
-                </div>
-                <h1 className="title">
-                    Web Development
-                </h1>
-                <p className="description">
-                Lorem ipsum dolor sit amet 
-                consectetur adipisicing elit. 
-                Autem tenetur ratione quod.
-                </p>
-            </div>
+           <ServiceItem 
+           title='Web design'
+           description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod"
+            />
         </div>
     )
 }

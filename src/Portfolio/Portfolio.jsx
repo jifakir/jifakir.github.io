@@ -13,7 +13,7 @@ export default () => {
         <div className="portfolio">
             <SectionWrap title='Portfolio'>
                 <div className="portfolios-wrapper">
-                    <PortItem projectLink='https://g1it6.csb.app/' src={screenshot} title='React Calculator' subtitle='A simple javascript(react) calculator.' />
+                    <PortItem projectLink='https://objective-pare-e289b0.netlify.app/' src={screenshot} title='React Calculator' subtitle='A simple javascript(react) calculator.' />
                     <PortItem src={screenshot} title='React Calculator' subtitle='A simple javascript(react) calculator.' />
                     <PortItem src={screenshot} title='React Calculator' subtitle='A simple javascript(react) calculator.' />
                     <PortItem src={screenshot} title='React Calculator' subtitle='A simple javascript(react) calculator.' />
