@@ -1,7 +1,8 @@
 @import '../../common';
 .service{
+    width: 100%;
     border: 2px solid $ter-bg;
-    border-top: 5px solid $ter-bg;
+    border-top: 5px solid $ter-bg;  
     margin-bottom: 15px;
     background: $sec-bg;
     transition: all 500ms ease-in-out;

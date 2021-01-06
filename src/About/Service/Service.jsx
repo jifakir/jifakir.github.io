@@ -4,13 +4,13 @@ import ServiceItem from './ServiceItem/ServiceItem';
 
 
 
-export default () => {
+export default ({title, description}) => {
 
     return(
         <div className="service">
            <ServiceItem 
-           title='Web design'
-           description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod"
+           title={title}
+           description={description}
             />
         </div>
     )

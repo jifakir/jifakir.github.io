@@ -25,22 +25,9 @@
             height: 10px;
             background: $ter-bg;
             .progress{
-                width: 90%;
+                width: 0;
                 height: 100%;
                 background: $com-color;
-                // animation-duration: 5s;
-                // animation-name: anim;
-                animation: anim 1s cubic-bezier(.69,.23,.98,.92);
-                @keyframes anim {
-                    from{
-                        width: 0%;
-                    }
-                
-                    to{
-                        width: 90%;
-                    }
-                }
-                
             }
         }
     }
