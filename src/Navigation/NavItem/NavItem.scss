@@ -1,8 +1,6 @@
 @import '../../common';
 
-@mixin nav-link {
-    
-}
+
 .nav-item{
                     width: 100%;
                     margin-bottom: 1px;
@@ -11,6 +9,7 @@
                     width: 100%;
                     text-decoration: none;
                     color: $pri-color;
+                    font-weight: 500;
                     padding: 10px 0;
                     margin-bottom: 1px;
                     text-align: center;

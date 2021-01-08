@@ -9,6 +9,7 @@ import Button from '../UI/Button/Button';
 import Input from '../UI/Input/Input';
 import './Contact.scss';
 import ContactCard from './ContactCard/ContactCard';
+import Submitted from './Submitted/Submitted';
 
 
 export default () => {
@@ -18,6 +19,8 @@ export default () => {
         email:'',
         comment:''
     });
+    const [sent, setSent] = useState(false);
+    const [submitted, setSubmitted] = useState(false);
     const onChangeHandler = (e) => {
         const target = e.target;
         setState({
@@ -27,14 +30,15 @@ export default () => {
     }
     const onSubmitHandler = (e) => {
         e.preventDefault();
+        setSubmitted(true);
         const templateParams = {
             'from_name': state.name,
             'message': `name: ${state.name} mobile: ${state.number} email: ${state.email} message: ${state.comment}`
         };
         emailjs.send(apiKeys.service_id, apiKeys.template_id, templateParams, apiKeys.user_id)
-        .then((res) => res)
+        .then(() => setSent(true) )
         .then((error) => error);
-        console.log(state.comment)
+        console.log(sent);
         setState((prevState) => ({
             name:'',
             number:'',
@@ -42,13 +46,8 @@ export default () => {
             comment:''
         }));
     }   
-    return (
-        <div className="contact">
-            <SectionWrap title='Contact Me' >
-                <div className="contact-wrapper">
-                    <div className="left-column">
-                        <h2 className="title">Get In Touch</h2>
-                        <form onSubmit={onSubmitHandler} className="contact-form">
+    const form = (
+        <form onSubmit={onSubmitHandler} style={{display: `${submitted?'none':'block'}`}} className="contact-form">
                             <Input 
                                 changed={onChangeHandler}  
                                 type='text' 
@@ -76,10 +75,23 @@ export default () => {
                                 tab='4' />
                             <Button tab='5' type='submit' btnName='Send Mail'/>
                         </form>
+    );
+    return (
+        <div className="contact">
+            <SectionWrap title='Contact Me' >
+                <div className="contact-wrapper">
+                    <div className="left-column">
+                        <h2 className="title">Get In Touch</h2>
+                        {
+                            submitted ? 
+                            <Submitted sent={sent} />:
+                            form
+                        }
+                        
                     </div>
                     <div className="right-column">
                         <ContactCard 
-                        title='Phone Number' 
+                        title='Phone' 
                         contact1='01758681702' 
                         contact2='01575047862'
                         icon={<FaMobileAlt />} />
