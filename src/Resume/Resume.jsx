@@ -19,7 +19,9 @@ export default () => {
                     <Skill title='JAVASCRIPT' percent='85%' />
                     <Skill title='REACT' percent='90%' />
                     <Skill title='PHOTOSHOP' percent='75%' />
-                    <Skill title='PYTHON' percent='70%' />
+                    <Skill title='SASS' percent='85%' />
+                    <Skill title='Styled Components' percent='80%' />
+                    <Skill title='GSAP' percent='70%' />
                 </div>
             </SectionWrap>
             <SectionWrap title='Resume'>

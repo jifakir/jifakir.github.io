@@ -8,14 +8,16 @@
     }
     .image-wrapper{
         flex: 50%;
+        max-height: 410px;
         margin-bottom: 25px;
         position: relative;
         img{
             max-width: 100%;
-            height: auto;
+            height: 100%;
         }
         &::before{
             position: absolute;
+            z-index: 100;
             content: '';
             width: 1rem;
             height: 60%;
@@ -26,7 +28,7 @@
             content: '';
             width: 1rem;
             height: 60%;
-            bottom: 6px;
+            bottom: 0;
             right: 0;
             background: rgba($color: $com-color, $alpha: 0.5);
         }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import SectionWrap from '../SectionWrap/SectionWrap';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
@@ -6,16 +6,20 @@ import './About.scss';
 import AboutMe from './AboutMe/AboutMe';
 import Reviews from './Reviews/Reviews';
 import Service from './Service/Service';
+import {MdDevices, MdSmartphone, MdColorLens} from 'react-icons/md';
+import gsap from 'gsap';
 
 
 
 export default () => {
 
     const [deviceWidth, setDeviceWidth] = useState(null);
+    const service1 = useRef();
 
     useEffect(()=> {
         let innerWidth = window.innerWidth;
         setDeviceWidth(innerWidth);
+        gsap.from(service1.current,{x: -50, duration: 1})
     },[]);
     console.log(deviceWidth)
     return (
@@ -25,9 +29,9 @@ export default () => {
             </SectionWrap>
             <SectionWrap title='Services' styles={{paddingBottom:0}}>
                 <div className="services-wrapper">
-                    <Service title='Web Design' description='I do web template design with React.' />
-                    <Service title='Web Develompent' description='I do back end development with nodejs. Besides I can develop back-end with Django(Python)' />
-                    <Service title='Mobile Application' description='I develop modern android and ios app with react native. ' />   
+                    <Service icons={<MdColorLens/>} ref={service1} title='Web Design' description='I do web template design with React.' />
+                    <Service icons={<MdDevices/>} title='Web Develompent' description='I do back end development with nodejs. Besides I can develop back-end with Django(Python)' />
+                    <Service icons={<MdSmartphone/>} title='Mobile Application' description='I develop modern android and ios app with react native. ' />   
                 </div>
             </SectionWrap>
             <SectionWrap title='Reviews'>

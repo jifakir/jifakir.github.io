@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Button from '../../UI/Button/Button';
+import CoverPhoto from '../../asstes/cover.jpg';
 import './AboutMe.scss';
+import gsap from 'gsap';
 
 export default () => {
-
+    const imageWrapper = useRef();
+    const bioWrapper = useRef();
+    useEffect(()=> {
+        gsap.from(imageWrapper.current,{opacity:0, y:100, duration: 1});
+        gsap.from(bioWrapper.current,{opacity:0, y:-100, duration: 1});
+    },[])
     return (
         <div className="about-me">
-           <div className="image-wrapper">
-               <img src="https://scontent.fjsr5-1.fna.fbcdn.net/v/t1.0-9/20031885_1903996583171931_4879815851320476666_n.jpg?_nc_cat=104&ccb=2&_nc_sid=19026a&_nc_ohc=K23OuJdAgVEAX-H5RWn&_nc_ht=scontent.fjsr5-1.fna&oh=9301feda1bd2cb9a3a4a2118ce2009c7&oe=5FE8362D" alt="CoverPhoto"/>
+           <div className="image-wrapper" ref={imageWrapper}>
+               <img src={CoverPhoto} alt="CoverPhoto" />
            </div>
-           <div className="bio-wrapper">
+           <div className="bio-wrapper" ref={bioWrapper}>
                <h1 className="title">I am <span className='name'>JI Fakir</span></h1>
                <p className="bio-brief">
                I am a frontend web developer. I can provide clean code and pixel perfect design. I also make website more & more interactive with web animations.

@@ -9,7 +9,7 @@ export default ({percent, title}) => {
 
     useEffect(()=> {
         gsap.to(animRef, {width: percent, ease: "power2", duration: 1});
-    },[]);
+    });
 
     return(
         <div className="Skill">

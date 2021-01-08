@@ -27,7 +27,10 @@
         align-items: center;
     }
     .title{
-        
+        font-size: 1.3rem;
+        @media (min-width: 900px) {
+            font-size: 2rem;
+        }
     }
 }
 .work-timeline{
@@ -48,6 +51,9 @@
         align-items: center;
     }
     .title{
-        
+        font-size: 1.3rem;
+        @media (min-width: 900px) {
+            font-size: 2rem;
+        }
     }
 }

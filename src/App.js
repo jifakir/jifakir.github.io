@@ -29,9 +29,9 @@ function App() {
           <Route path='/portfolio' exact>
             <Portfolio />
           </Route>
-          <Route path='/blogs' exact>
+          {/* <Route path='/blogs' exact>
             <Blog />
-          </Route>
+          </Route> */}
           <Route path='/contact' exact>
             <Contact />
           </Route>

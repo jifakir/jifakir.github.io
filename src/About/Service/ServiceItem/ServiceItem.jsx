@@ -1,17 +1,15 @@
 import React from 'react';
-
-import { MdColorLens } from 'react-icons/md';
 import './ServiceItem.scss';
 
 
 
-const ServiceItem = ({title, description}) => {
+const ServiceItem = ({title, description,icons}) => {
 
     return (
         <div className="service-item">
              <div className="service-wrapper">
                 <div className="icon-wrapper">
-                    <MdColorLens />
+                    {icons}
                 </div>
                 <h1 className="title">
                    {title}

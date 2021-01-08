@@ -11,10 +11,10 @@ export const workData = [
 ];
 export const educationData = [
     {
-       startYear: "",
+       startYear: "2018",
        endYear: "",
-       designation: "",
-       subject: "",
-       school: "",
+       degree: "Bachalor in Computer Science",
+       school: "University of the People",
+       description: "University of the people is one of the best university that is tution free. I hope it will be the best online university in the world.",
     },
 ];

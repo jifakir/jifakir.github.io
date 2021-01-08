@@ -4,12 +4,13 @@ import ServiceItem from './ServiceItem/ServiceItem';
 
 
 
-export default ({title, description}) => {
+export default ({title, description, ref, icons}) => {
 
     return(
-        <div className="service">
+        <div className="service" ref={ref}>
            <ServiceItem 
            title={title}
+           icons={icons}
            description={description}
             />
         </div>
