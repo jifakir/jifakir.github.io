@@ -8,7 +8,13 @@
     }
     .row{
         width: 100%;
+        display: flex;
+        justify-content: space-between;
         .title{
+            color: $sec-color;
+            font-size: 1.2rem;
+        }
+        .title-icon{
             color: $sec-color;
             font-size: 1.2rem;
         }
