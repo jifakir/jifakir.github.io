@@ -6,6 +6,7 @@ import SectionWrap from '../SectionWrap/SectionWrap';
 import './Resume.scss';
 import Skill from './Skill/Skill';
 import Timeline from './Timeline/Timeline';
+import ReactHelmet from '../Helmet/Helmet';
 
 
 
@@ -13,6 +14,7 @@ export default () => {
 
     return(
         <div className="resume">
+            <ReactHelmet title="Resume" />
             <SectionWrap title='Skills' styles={{paddingBottom:0}}>
                 <div className="skills-wrapper">
                     <Skill title='HTML' percent='90%' icon={<SiHtml5/>} />

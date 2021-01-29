@@ -10,7 +10,7 @@ import Input from '../UI/Input/Input';
 import './Contact.scss';
 import ContactCard from './ContactCard/ContactCard';
 import Submitted from './Submitted/Submitted';
-
+import ReactHelmet from '../Helmet/Helmet';
 
 export default () => {
     const [state, setState] = useState({
@@ -78,6 +78,7 @@ export default () => {
     );
     return (
         <div className="contact">
+            <ReactHelmet title="Contact" />
             <SectionWrap title='Contact Me' >
                 <div className="contact-wrapper">
                     <div className="left-column">

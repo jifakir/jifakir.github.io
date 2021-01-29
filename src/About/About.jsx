@@ -9,6 +9,7 @@ import Reviews from './Reviews/Reviews';
 import Service from './Service/Service';
 import {MdDevices, MdSmartphone, MdColorLens} from 'react-icons/md';
 import gsap from 'gsap';
+import ReactHelmet from '../Helmet/Helmet';
 
 SwiperCore.use([Virtual]);
 
@@ -26,6 +27,7 @@ export default () => {
     console.log(deviceWidth)
     return (
         <div className="about">
+            <ReactHelmet title="About" />
             <SectionWrap title='About Me' styles={{paddingBottom:0}}>
                 <AboutMe />
             </SectionWrap>
