@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import SectionWrap from '../SectionWrap/SectionWrap';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Virtual } from 'swiper';
+import SwiperCore, { Autoplay } from 'swiper';
 import 'swiper/swiper.scss';
 import './About.scss';
 import AboutMe from './AboutMe/AboutMe';
@@ -11,7 +11,7 @@ import {MdDevices, MdSmartphone, MdColorLens} from 'react-icons/md';
 import gsap from 'gsap';
 import ReactHelmet from '../Helmet/Helmet';
 
-SwiperCore.use([Virtual]);
+SwiperCore.use([Autoplay]);
 
 
 export default () => {
@@ -40,7 +40,7 @@ export default () => {
             </SectionWrap>
             <SectionWrap title='Reviews'>
                 <div className="reviews-wrapper">
-                    <Swiper slides loop autoplay spaceBetween={deviceWidth <= 700 ? 10 : 4} >
+                    <Swiper slides loop Autoplay spaceBetween={deviceWidth <= 700 ? 10 : 4} >
                         {Array(5).fill().map((v, i)=> <SwiperSlide key={i}  ><Reviews /></SwiperSlide> )}
                     </Swiper>
                 </div>
