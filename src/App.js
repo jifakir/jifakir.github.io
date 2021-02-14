@@ -9,10 +9,12 @@ import Home from './Home/Home';
 import Navigation from './Navigation/Navigation';
 import Portfolio from './Portfolio/Portfolio';
 import Resume from './Resume/Resume';
+import ScrollToTop from './ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop/>
       <div className="Portfolio">
         <BgLines/>
         <Navigation />

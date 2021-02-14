@@ -1,10 +1,17 @@
+import calculator from '../asstes/calculator.png';
+import typingtest from '../asstes/typingtest.png';
 
-
-export const portfolioData = [
+export default portfolioData = [
     {
         title: "React Calculator",
         subtitle: "A simple javascript(react) calculator.",
-        projectLink: "https://objective-pare-e289b0.netlify.app/",
-        screenshot: "",
-    }
+        projectLink: "https://jifakircalculator.netlify.app/",
+        screenshot: calculator,
+    },
+    {
+        title: "Teyping Test",
+        subtitle: "A simple javascript(react) Typing Tester.",
+        projectLink: "https://jifakirtypingtest.netlify.app/",
+        screenshot: typingtest,
+    },
 ];

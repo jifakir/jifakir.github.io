@@ -4,6 +4,7 @@
 .contact{
     width: 100%;
     padding: 0 25px;
+    scroll-snap-align: start;   
     .contact-wrapper{
         width: 100%;
         @media (min-width: 900px) {
