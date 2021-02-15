@@ -53,7 +53,6 @@ export default () => {
 
     return (
         <div className="Home">
-            <ReactHelmet title="Home" />
             <Particles className='particles' params={config} />
             <div className="home-wrapper">
                 <h1 className="title">Hi, I am <span className="designing-name">{home.name}</span></h1>

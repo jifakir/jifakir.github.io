@@ -24,7 +24,7 @@ export default () => {
         setDeviceWidth(innerWidth);
         gsap.from(service1.current,{y: -100, duration: 1 })
     });
-    const slides = deviceWidth >= 700 ? `slidesPerView={2}` : null ;
+    
     return (
         <div className="about">
             <ReactHelmet title="About" />
@@ -40,7 +40,7 @@ export default () => {
             </SectionWrap>
             <SectionWrap title='Reviews'>
                 <div className="reviews-wrapper">
-                    <Swiper slides loop Autoplay spaceBetween={deviceWidth <= 700 ? 10 : 4} >
+                    <Swiper slidesPerView={deviceWidth >= 700 ? 2 : 1} loop Autoplay spaceBetween={deviceWidth <= 700 ? 10 : 4} >
                         {Array(5).fill().map((v, i)=> <SwiperSlide key={i}  ><Reviews /></SwiperSlide> )}
                     </Swiper>
                 </div>
