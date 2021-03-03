@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import SectionWrap from '../SectionWrap/SectionWrap';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Autoplay } from 'swiper';
+import SwiperCore, { Autoplay, Pagination } from 'swiper';
 import 'swiper/swiper.scss';
+import 'swiper/components/pagination/pagination.scss';
 import './About.scss';
 import AboutMe from './AboutMe/AboutMe';
 import Reviews from './Reviews/Reviews';
@@ -11,17 +12,15 @@ import {MdDevices, MdSmartphone, MdColorLens} from 'react-icons/md';
 import gsap from 'gsap';
 import ReactHelmet from '../Helmet/Helmet';
 
-SwiperCore.use([Autoplay]);
+SwiperCore.use([Autoplay, Pagination]);
 
 
 export default () => {
 
-    const [deviceWidth, setDeviceWidth] = useState(null);
     const service1 = useRef();
 
     useEffect(()=> {
-        let innerWidth = window.innerWidth;
-        setDeviceWidth(innerWidth);
+        
         gsap.from(service1.current,{y: -100, duration: 1 })
     });
     
@@ -40,7 +39,19 @@ export default () => {
             </SectionWrap>
             <SectionWrap title='Reviews'>
                 <div className="reviews-wrapper">
-                    <Swiper slidesPerView={deviceWidth >= 700 ? 2 : 1} loop Autoplay spaceBetween={deviceWidth <= 700 ? 10 : 4} >
+                    <Swiper 
+                    loop 
+                    autoplay 
+                    pagination
+                    slidesPerView={1} 
+                    spaceBetween={4} 
+                    breakpoints={{
+                        1050: {
+                            slidesPerView: 2,
+                            spaceBetween: 10
+                        }
+                    }}
+                    >
                         {Array(5).fill().map((v, i)=> <SwiperSlide key={i}  ><Reviews /></SwiperSlide> )}
                     </Swiper>
                 </div>
