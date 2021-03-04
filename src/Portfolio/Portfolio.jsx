@@ -1,7 +1,7 @@
 import React from 'react';
-import calculator from '../asstes/calculator.png';
-import typingtest from '../asstes/typingtest.png';
-import screenshot from '../asstes/calculator.png';
+import calculator from '../assetes/calculator.png';
+import typingtest from '../assetes/typingtest.png';
+import screenshot from '../assetes/calculator.png';
 import SectionWrap from '../SectionWrap/SectionWrap';
 import PortItem from './PortItem/PortItem';
 import './Portfolio.scss';

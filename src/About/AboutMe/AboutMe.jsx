@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import Button from '../../UI/Button/Button';
-import CoverPhoto from '../../asstes/cover.jpg';
+import CoverPhoto from '../../assetes/cover.jpg';
 import './AboutMe.scss';
 import gsap from 'gsap';
 

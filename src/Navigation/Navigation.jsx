@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Navigation.scss';
 import NavItem from './NavItem/NavItem';
 import ToggleBtn from './ToggleBtn/ToggleBtn';
-import Avatar from '../asstes/avatar.jpg';
+import Avatar from '../assetes/avatar.jpg';
 
 
 export default () => {
