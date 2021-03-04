@@ -5,11 +5,12 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default () => {
-    const yearRef = useRef();
-    const designRef = useRef();
-    const companyRef = useRef();
+export default ({item}) => {
+    console.log("item", item);
+    console.log(item.endYear);
     const gsapRef = useRef();
+
+    const {endYear, startYear, designation, companyName, description} = item;
 
     useEffect(()=> {
         gsap.from(gsapRef.current, {
@@ -27,20 +28,17 @@ export default () => {
     return (
         <div className="timeline" ref={gsapRef}>
             <div className="left-column"  >
-                <h2 className="duration">2019 - 2018</h2>
+                <h2 className="duration">{endYear} - {startYear}</h2>
             </div>
             <div className="right-column">
                 <h2 className="designation"  >
-                    Frontend Web Developer
+                    {designation}
                 </h2>
                 <h3 className="company-name" >
-                    Company Name
+                    {companyName}
                 </h3>
                 <p className="responsibility" >
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, 
-                magni mollitia, aspernatur consequatur accusamus vero eum facere 
-                exercitationem velit suscipit ipsam placeat libero. 
-                Deleniti exercitationem nostrum quasi. Molestiae, vel porro.
+                    {description}
                 </p>
             </div>
         </div>

@@ -1,9 +1,8 @@
 import React from 'react';
 import Particles from 'react-particles-js';
 import { FaFacebookF, FaTwitter, FaGithub } from 'react-icons/fa';
-import { home } from '../asstes/data';
+import { home } from '../assetes/data';
 import './Home.scss';
-import ReactHelmet from '../Helmet/Helmet';
 
 export default () => {
     const config = {

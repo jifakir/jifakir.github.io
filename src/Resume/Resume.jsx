@@ -5,12 +5,17 @@ import {SiHtml5, SiCss3,SiJavascript, SiAdobephotoshop, SiReact, SiSass, SiStyle
 import SectionWrap from '../SectionWrap/SectionWrap';
 import './Resume.scss';
 import Skill from './Skill/Skill';
+
 import Timeline from './Timeline/Timeline';
 import ReactHelmet from '../Helmet/Helmet';
 
+import { resume } from '../assetes/data';
 
 
 export default () => {
+
+    const experience = resume.experience;
+    const education = resume.education;
 
     return(
         <div className="resume">
@@ -39,10 +44,9 @@ export default () => {
                             </h1>
                         </div>
                         <div className="work-timeline">
-                            <Timeline />
-                            <Timeline />
-                            <Timeline />
-                            <Timeline />
+                            {
+                                experience.map((item, idx) => <Timeline key={idx} item={item} />)
+                            }
                         </div>
                     </div>
                     <div className="education-qualification">
@@ -55,10 +59,9 @@ export default () => {
                             </h1>
                         </div>
                         <div className="education-timeline">
-                            <Timeline />
-                            <Timeline />
-                            <Timeline />
-                            <Timeline />
+                            {
+                                education.map((item, idx) => <Timeline key={idx} item={item} />)
+                            }
                         </div>
                     </div>
                 </div>
