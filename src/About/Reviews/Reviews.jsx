@@ -3,23 +3,15 @@ import './Reviews.scss';
 
 
 
-export default () => {
+export default ({item}) => {
+    const { testimonial, clientname, organization, designation} = item;
 
     return(
         <div className="reviews">
             <div className="reviews-wrapper">
                 <div className="test-monial-wrapper">
                     <p className="testmonial">
-                        Lorem impsum doller.  
-                        Lorem impsum doller.  
-                        Lorem impsum doller.  
-                        Lorem impsum doller.  
-                        Lorem impsum doller.  
-                        Lorem impsum doller.  
-                        Lorem impsum doller.  
-                        Lorem impsum doller.  
-                        Lorem impsum doller.  
-                        Lorem impsum doller.  
+                        {testimonial}
                     </p>
                     <div className="indicator">
 
@@ -27,10 +19,10 @@ export default () => {
                 </div>
                 <div className="client-identity">
                     <h1 className="name">
-                        Burdette Turner
+                        {clientname}
                     </h1>
                     <h3 className="designation">
-                        Web Developer, Abc Company
+                        {designation}, {organization}
                     </h3>
                 </div>
             </div>

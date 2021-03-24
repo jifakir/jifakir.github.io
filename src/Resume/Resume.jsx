@@ -14,8 +14,7 @@ import { resume } from '../assetes/data';
 
 export default () => {
 
-    const experience = resume.experience;
-    const education = resume.education;
+    const {experience, education} = resume;
 
     return(
         <div className="resume">
@@ -45,7 +44,7 @@ export default () => {
                         </div>
                         <div className="work-timeline">
                             {
-                                experience.map((item, idx) => <Timeline key={idx} item={item} />)
+                                experience.map((item, idx) => <Timeline key={idx} item={item} />).reverse()
                             }
                         </div>
                     </div>

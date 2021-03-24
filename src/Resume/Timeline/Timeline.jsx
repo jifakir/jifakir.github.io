@@ -6,8 +6,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default ({item}) => {
-    console.log("item", item);
-    console.log(item.endYear);
+    
     const gsapRef = useRef();
 
     const {endYear, startYear, designation, companyName, description} = item;

@@ -7,7 +7,7 @@
         display: flex;
     }
     .left-column{
-        width: 500px;
+        min-width: 180px;
         .duration{
             font-weight: 500;
             letter-spacing: 1px;

@@ -6,13 +6,17 @@ import './PortItem.scss';
 
 
 
-export default ({src, title, subtitle, projectLink}) => {
-
+export default ({item}) => {
+    const { 
+        title,
+        subtitle,
+        projectLink,
+        screenshot, } = item;
     return(
         <div className="port-item" >
             <div className="port-screenshot">
                 <div className="screenshot-wrapper">
-                    <img src={src} alt="Screenshot"/>
+                    <img src={screenshot} alt="Screenshot"/>
                 </div>
                 <div className="icons-group">
                     <div className="icon-wrapper">
@@ -21,7 +25,9 @@ export default ({src, title, subtitle, projectLink}) => {
                         </a>
                     </div>
                     <div className="icon-wrapper">
-                        <FiLink />
+                        <a href={projectLink}>
+                            <FiLink />
+                        </a>
                     </div>
                 </div>
 

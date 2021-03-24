@@ -13,17 +13,14 @@
         }
     }
     .reviews-wrapper{
-        display: flex;
-        flex-direction: column;
         .swiper-container{
             width: 100%;
+            height: auto;
             .swiper-pagination{
                 bottom: 0;
                 text-align: right;
             }
         }
-        @media (min-width: 900px) {
-            flex-direction: row;
-        }
+        
     }
 }

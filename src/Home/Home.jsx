@@ -3,6 +3,7 @@ import Particles from 'react-particles-js';
 import { FaFacebookF, FaTwitter, FaGithub } from 'react-icons/fa';
 import { home } from '../assetes/data';
 import './Home.scss';
+import  ReactHelmet  from '../Helmet/Helmet';
 
 export default () => {
     const config = {
@@ -52,6 +53,7 @@ export default () => {
 
     return (
         <div className="Home">
+            <ReactHelmet title="Home" />
             <Particles className='particles' params={config} />
             <div className="home-wrapper">
                 <h1 className="title">Hi, I am <span className="designing-name">{home.name}</span></h1>

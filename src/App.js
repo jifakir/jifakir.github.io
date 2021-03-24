@@ -3,7 +3,6 @@ import {HashRouter as Router, Redirect, Route, Switch} from 'react-router-dom';
 import About from './About/About';
 import './App.scss';
 import BgLines from './BgLines/BgLines';
-import Blog from './Blog/Blog';
 import Contact from './Contact/Contact';
 import Home from './Home/Home';
 import Navigation from './Navigation/Navigation';

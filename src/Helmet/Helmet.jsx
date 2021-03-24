@@ -10,7 +10,7 @@ const ReactHelmet = ({title}) => {
     return (
         <Fragment>
             <Helmet>
-                <title>{title} | JI Fakir is react developer.</title>
+                <title> JI Fakir | {title}</title>
                 <meta name="description" content="Nested component" />
             </Helmet>
         </Fragment>
