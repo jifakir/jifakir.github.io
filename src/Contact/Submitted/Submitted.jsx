@@ -1,17 +1,11 @@
 import React from 'react';
 import {MdDoneAll} from 'react-icons/md';
+import Loader from '../../UI/Loader/Loader';
 import './Submitted.scss';
 
 
 const Submitted = ({sent}) => {
-    const spinner = (
-            <div className="waiting-wrapper">
-                <div className="loader">
-
-                </div>
-                <div className="waiting">Your mail is sending....</div>
-            </div>
-    );
+    
     const success = (
             <div className="success">
                 <MdDoneAll className='success-icon' />
@@ -21,7 +15,7 @@ const Submitted = ({sent}) => {
     return (
         <div className="submitted">
             {
-                sent ? success : spinner
+                sent ? success : <Loader title="Your mail sending" />
             }
         </div>
     )
