@@ -29,12 +29,10 @@ export default ({item}) => {
                 </div>
                 <div className="icons-group">
                     <div className="icon-wrapper">
-                        <a onClick={() => setOpen(prev => !prev)}  target='_blank' rel='noopener noreferrer'>
                             <MdZoomIn />
-                        </a>
                     </div>
                     <div className="icon-wrapper">
-                        <a href={projectLink}>
+                        <a href={projectLink} target='_blank' rel='noopener noreferrer'>
                             <FiLink />
                         </a>
                     </div>
