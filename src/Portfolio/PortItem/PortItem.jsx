@@ -28,7 +28,7 @@ export default ({item}) => {
                     <img src={screenshot} alt="Screenshot"/>
                 </div>
                 <div className="icons-group">
-                    <div className="icon-wrapper">
+                    <div onClick={() => setOpen(prev => !prev)} className="icon-wrapper">
                             <MdZoomIn />
                     </div>
                     <div className="icon-wrapper">
