@@ -3,14 +3,14 @@
 
 
 .project-view{
-    width: 80%;
-    height: 85vh;
-    background: $ter-bg;
-    border-radius: 1rem;
+    width: 100%;
+    height: 100vh;
+    background: $pri-bg;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     position: relative;
+    border: 2px solid $com-color;
     .close-btn{
         position: absolute;
         top: 0;
@@ -18,10 +18,12 @@
         color: red;
         font-size: 1.5rem;
         cursor: pointer;
+        z-index: 2000;
     }
     .project-frame{
         width: 100%;
         min-height: 80%;
+        border-bottom: 2px solid $com-color;
         .frame-body{
             width: 100%;
             overflow-x: hidden;
@@ -30,6 +32,13 @@
     }
     .project-description{
         padding: 8px 1rem;
-        color: $pri-color;
+        color: $com-color;
+        font-weight: bold;
+        font-family: $pri-font;
+    }
+    @media (min-width: 750px) {
+        width: 80%;
+        height: 85vh;
+        border-radius: 1rem;
     }
 }
