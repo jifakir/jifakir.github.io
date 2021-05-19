@@ -3,6 +3,7 @@ import typingtest from './typingtest.png';
 import rmapp from './rmapp.png';
 import ceapp from './ceapp.png';
 import evaly from './evaly.png';
+import snakeheadpm from './snakeheadpm.png';
 
 export const home = {
     name: 'JI Fakir',
@@ -101,6 +102,12 @@ export const portfolio = [
         subtitle: "Used: Nextjs, Redux Toolkit, TailwindCSS ",
         projectLink: "https://evaly-clone.vercel.app",
         screenshot: evaly,
+    },
+    {   id: 6,
+        title: "Snakehead PM",
+        subtitle: "Used: Nextjs, TailwindCSS, Rechartjs ",
+        projectLink: "https://snakeheadpm.vercel.app",
+        screenshot: snakeheadpm,
     },
 ];
 

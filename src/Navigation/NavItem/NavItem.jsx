@@ -6,7 +6,6 @@ import './NavItem.scss';
 
 export default ({name, clicked}) => {
     let location = useLocation();
-    console.log(location.pathname);
     return (
         <Fragment >
             <li key={name} className='nav-item' onClick={clicked}>
@@ -19,4 +18,4 @@ export default ({name, clicked}) => {
             </li>
         </Fragment>
     )
-}
+};

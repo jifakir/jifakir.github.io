@@ -1,7 +1,7 @@
 import React from 'react';
 import {BsBriefcase} from 'react-icons/bs';
 import {BiBook} from 'react-icons/bi';
-import {SiHtml5, SiCss3,SiJavascript, SiAdobephotoshop, SiReact, SiSass, SiStyledComponents, SiRedux} from 'react-icons/si';
+import {SiHtml5, SiCss3,SiJavascript, SiNextDotJs, SiReact, SiSass, SiTailwindcss, SiRedux} from 'react-icons/si';
 import SectionWrap from '../SectionWrap/SectionWrap';
 import './Resume.scss';
 import Skill from './Skill/Skill';
@@ -24,10 +24,10 @@ export default () => {
                     <Skill title='HTML' percent='90%' icon={<SiHtml5/>} />
                     <Skill title='CSS' percent='95%' icon={<SiCss3/>} />
                     <Skill title='JAVASCRIPT' percent='85%' icon={<SiJavascript/>} />
-                    <Skill title='REACT' percent='90%' icon={<SiReact/>} />
-                    <Skill title='PHOTOSHOP' percent='75%' icon={<SiAdobephotoshop/>} />
+                    <Skill title='REACT' percent='95%' icon={<SiReact/>} />
+                    <Skill title='NextJS' percent='90%' icon={<SiNextDotJs/>} />
                     <Skill title='SASS' percent='85%' icon={<SiSass/>} />
-                    <Skill title='Styled Components' percent='80%' icon={<SiStyledComponents/>} />
+                    <Skill title='TailwindCSS' percent='90%' icon={<SiTailwindcss/>} />
                     <Skill title='Redux' percent='90%' icon={<SiRedux/>} />
                 </div>
             </SectionWrap>
