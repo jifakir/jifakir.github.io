@@ -5,6 +5,8 @@ import { AnimatePresence, Reorder, motion } from 'framer-motion';
 import Title from './Title';
 import Image from 'next/image';
 import { MdOutlineClose } from 'react-icons/md';
+import { LinkSquare, Maximize } from 'iconsax-react';
+import PortfolioItem from './PortfolioItem';
 
 const categories = [
   { label: 'All', value: 'all' },
@@ -12,15 +14,10 @@ const categories = [
   { label: 'Mobile App', value: 'mobile' },
   { label: 'API', value: 'api' },
 ];
-const portfolios = [
+
+export const portfolios = [
   {
     id: 1,
-    catId: ['all', 'web'],
-    imgUrl:
-      'https://images.unsplash.com/photo-1682686578707-140b042e8f19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1375&q=80',
-  },
-  {
-    id: 2,
     catId: ['all', 'web'],
     imgUrl:
       'https://images.unsplash.com/photo-1682686578707-140b042e8f19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1375&q=80',
@@ -32,16 +29,22 @@ const portfolios = [
       'https://images.unsplash.com/photo-1682686578707-140b042e8f19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1375&q=80',
   },
   {
-    id: 4,
-    catId: ['mobile', 'all'],
+    id: 2,
+    catId: ['all', 'web'],
     imgUrl:
-      'https://images.unsplash.com/photo-1695088566123-593dc77ed3be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80',
+      'https://images.unsplash.com/photo-1682686578707-140b042e8f19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1375&q=80',
   },
   {
     id: 5,
     catId: ['api', 'all'],
     imgUrl:
       'https://images.unsplash.com/photo-1694365899936-850bc6c2b0f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1450&q=80',
+  },
+  {
+    id: 4,
+    catId: ['mobile', 'all'],
+    imgUrl:
+      'https://images.unsplash.com/photo-1695088566123-593dc77ed3be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80',
   },
   {
     id: 6,
@@ -87,31 +90,12 @@ const Portfolio = () => {
             {portfolios
               .filter((itm) => itm.catId.includes(selectedCat))
               .map((itm, idx) => (
-                <motion.li
-                  key={`portfolio_${idx}`}
-                  layoutId={`${itm.id}`}
-                  onClick={() => setItem(itm)}
-                  initial={{ scale: 0 }}
-                  animate={{
-                    scale: 1,
-                    transition: {
-                      delay: 0.5,
-                      type: 'spring',
-                      stiffness: 350,
-                      damping: 25,
-                    },
-                  }}
-                  layout
-                  exit={{ opacity: 0, transition: { delay: 0.5 } }}
-                  className="relative z-0 w-full h-40 flex justify-center items-center rounded-lg bg-white overflow-hidden cursor-pointer"
-                >
-                  <Image
-                    alt="Object Id"
-                    src={itm.imgUrl}
-                    className="object-cover"
-                    fill
-                  />
-                </motion.li>
+                <PortfolioItem
+                  data={itm}
+                  key={`portfolio_item_${idx}`}
+                  selectedCat={selectedCat}
+                  onMaximize={() => setItem(itm)}
+                />
               ))}
           </AnimatePresence>
         </ul>
