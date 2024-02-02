@@ -23,10 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${nunito.variable} bg-dark h-screen scrollbar-thin font-sans shadow-inner shadow-primary/80`}
+        className={`${nunito.variable} bg-dark h-screen overflow-hidden font-sans shadow-inner shadow-primary/80`}
       >
         <Sidebar />
-        <section className="relative ml-[300px] h-full overflow-y-scroll overflow-x-hidden scrollbar-thin scrollbar-thumb-primary/50 scrollbar-thumb-rounded-full">
+        <section className="relative ml-[300px] h-full overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-track-transparent scrollbar-thumb-primary/50 scrollbar-thumb-rounded-full">
           <div className="absolute right-0 top-0 left-0 min-h-screen flex justify-evenly -z-[500]">
             <div className="w-px min-h-full bg-gray-900" />
             <div className="w-px min-h-full  bg-gray-900" />

@@ -7,75 +7,30 @@ import Image from 'next/image';
 import { MdOutlineClose } from 'react-icons/md';
 import { LinkSquare, Maximize } from 'iconsax-react';
 import PortfolioItem from './PortfolioItem';
-
-const categories = [
-  { label: 'All', value: 'all' },
-  { label: 'Web App', value: 'web' },
-  { label: 'Mobile App', value: 'mobile' },
-  { label: 'API', value: 'api' },
-];
-
-export const portfolios = [
-  {
-    id: 1,
-    catId: ['all', 'web'],
-    imgUrl:
-      'https://images.unsplash.com/photo-1682686578707-140b042e8f19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1375&q=80',
-  },
-  {
-    id: 3,
-    catId: ['mobile', 'all'],
-    imgUrl:
-      'https://images.unsplash.com/photo-1682686578707-140b042e8f19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1375&q=80',
-  },
-  {
-    id: 2,
-    catId: ['all', 'web'],
-    imgUrl:
-      'https://images.unsplash.com/photo-1682686578707-140b042e8f19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1375&q=80',
-  },
-  {
-    id: 5,
-    catId: ['api', 'all'],
-    imgUrl:
-      'https://images.unsplash.com/photo-1694365899936-850bc6c2b0f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1450&q=80',
-  },
-  {
-    id: 4,
-    catId: ['mobile', 'all'],
-    imgUrl:
-      'https://images.unsplash.com/photo-1695088566123-593dc77ed3be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80',
-  },
-  {
-    id: 6,
-    catId: ['api', 'all'],
-    imgUrl:
-      'https://images.unsplash.com/photo-1694365899936-850bc6c2b0f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1450&q=80',
-  },
-];
+import { ProjectTypes, projectCategories, projects } from '../data/projects';
 
 const Portfolio = () => {
-  const [selectedCat, setSelectedCat] = useState('all');
-  const [selectedItem, setItem] = useState<Record<string, any> | null>(null);
+  const [selectedCat, setSelectedCat] = useState(0);
+  const [selectedItem, setItem] = useState<ProjectTypes | null>(null);
   const [frameLoading, setLoading] = useState(false);
   return (
     <>
       <Title title="Portfolio" />
       <div className="mt-20 min-h-[58vh]">
         <div className="flex justify-center items-center">
-          {categories?.map((cat, idx) => (
+          {projectCategories?.map((cat, idx) => (
             <div
               key={`categories_${idx}`}
-              onClick={() => setSelectedCat(cat.value)}
+              onClick={() => setSelectedCat(cat.id)}
               className="px-5"
             >
               <h5
                 className={`relative font-bold cursor-pointer ${
-                  selectedCat === cat.value ? 'text-primary' : 'text-white'
+                  selectedCat === cat.id ? 'text-primary' : 'text-white'
                 }`}
               >
-                {cat.label}
-                {selectedCat === cat.value && (
+                {cat.name}
+                {selectedCat === cat.id && (
                   <motion.div
                     className="absolute left-0 bottom-0 h-0.5 w-full bg-primary"
                     layoutId="category"
@@ -87,13 +42,14 @@ const Portfolio = () => {
         </div>
         <ul className="grid grid-cols-3 gap-5 mt-10">
           <AnimatePresence>
-            {portfolios
-              .filter((itm) => itm.catId.includes(selectedCat))
+            {projects
+              .slice(0, 6)
+              .filter((itm) => itm.categoryId.includes(selectedCat))
               .map((itm, idx) => (
                 <PortfolioItem
                   data={itm}
                   key={`portfolio_item_${idx}`}
-                  selectedCat={selectedCat}
+                  selectedCat={itm.categoryId}
                   onMaximize={() => setItem(itm)}
                 />
               ))}
@@ -124,7 +80,7 @@ const Portfolio = () => {
                     </span>
                   </div>
                   <iframe
-                    src="https://giverise.com"
+                    src={selectedItem?.projectUrl ?? 'https://giverise.com'}
                     width={'100%'}
                     height={'100%'}
                     onLoadStart={() => setLoading(true)}
