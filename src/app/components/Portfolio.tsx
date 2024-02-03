@@ -43,7 +43,7 @@ const Portfolio = () => {
         <ul className="grid grid-cols-3 gap-5 mt-10">
           <AnimatePresence>
             {projects
-              .slice(0, 6)
+              // .slice(0, 6)
               .filter((itm) => itm.categoryId.includes(selectedCat))
               .map((itm, idx) => (
                 <PortfolioItem
