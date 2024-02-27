@@ -11,6 +11,7 @@ import {
 import * as z from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { twMerge } from 'tailwind-merge';
+import { FaFacebookF, FaGithub, FaTwitter } from 'react-icons/fa';
 
 const schema = z.object({
   name: z
@@ -123,10 +124,10 @@ const Contact = () => {
   ));
 
   return (
-    <>
+    <div className="mt-20 md:mt-auto">
       <Title title="Get in Touch" />
-      <div className="mt-20 flex items-center gap-10">
-        <div className="w-2/3 space-y-5">
+      <div className="mt-10 md:mt-[4.5rem] 2xl:mt-20 md:flex items-center gap-10">
+        <div className="md:w-2/3 space-y-5">
           <div className="flex items-center gap-5 bg-white/5 px-5 py-3 rounded-lg">
             <div className="w-20 h-20 rounded-lg border-primary/40 text-primary text-4xl border shadow-sm shadow-primary bg-white/5 backdrop-blur-xl flex justify-center items-center">
               <Mobile />
@@ -176,7 +177,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="w-full ">
+        <div className="w-full mt-10 md:mt-auto">
           <h2 className="text-lg font-bold text-white mb-2">Get In Touch</h2>
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
             {buildForm}
@@ -196,7 +197,35 @@ const Contact = () => {
           </form>
         </div>
       </div>
-    </>
+      <footer className="pt-10 md:hidden pb-3 text-center">
+        <div className=" flex justify-center items-center gap-5">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.facebook.com/jifakir"
+            className="w-6 h-6 text-xs rounded-full border border-primary text-primary hover:text-secondary hover:border-secondary cursor-pointer transition-all duration-300 ease-in-out flex justify-center items-center"
+          >
+            <FaFacebookF />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://twitter.com/jifakir"
+            className="w-6 h-6 text-xs rounded-full border border-primary text-primary hover:text-secondary hover:border-secondary cursor-pointer transition-all duration-300 ease-in-out flex justify-center items-center"
+          >
+            <FaTwitter />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/jifakir"
+            className="w-6 h-6 text-xs rounded-full border border-primary text-primary hover:text-secondary hover:border-secondary cursor-pointer transition-all duration-300 ease-in-out flex justify-center items-center"
+          >
+            <FaGithub />
+          </a>
+        </div>
+      </footer>
+    </div>
   );
 };
 

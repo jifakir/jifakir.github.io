@@ -2,14 +2,24 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '.';
+import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <>
-      <h1 className="text-7xl font-bold text-white text-center">
+    <div className="min-h-screen md:min-h-full h-screen md:h-auto flex flex-col justify-center">
+      <div className="md:hidden relative my-8 mx-auto w-40 h-40 rounded-full overflow-hidden border-2 border-primary select-none">
+        <Image
+          alt="Avatar"
+          fill
+          src={'/avatar.jpg'}
+          className="object-cover -z-50"
+          priority
+        />
+      </div>
+      <h1 className=" text-4xl md:text-7xl font-bold text-white text-center">
         Hi, I am <span className="text-primary">JI Fakir</span>
       </h1>
-      <p className="text-secondary text-center text-xl mt-5 max-w-[1000px] mx-auto">
+      <p className="text-secondary text-center text-lg md:text-xl mt-5 max-w-[1000px] mx-auto">
         Passionate Full-Stack Developer | TypeScript Enthusiast | Crafting
         Remarkable Web & Mobile Experiences | Front-End Artistry | Back-End
         Wizardry | React Native Aficionado
@@ -45,7 +55,7 @@ const Hero = () => {
       <div className="flex justify-center">
         <Button>Hire Me</Button>
       </div>
-    </>
+    </div>
   );
 };
 

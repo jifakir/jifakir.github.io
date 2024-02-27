@@ -34,13 +34,20 @@ const navigations: { title: string; route: string }[] = [
 
 const Sidebar = () => {
   return (
-    <motion.aside className="w-[260px] absolute border border-primary overflow-hidden h-[90vh] top-[5vh] bg-transparent bottom-0 backdrop-blur-[1px] left-5 rounded-lg shadow-primary shadow-md flex flex-col">
+    <motion.aside
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="w-[260px] hidden md:flex absolute border border-primary overflow-hidden h-[90vh] top-[5vh] bg-transparent bottom-0 backdrop-blur-[1px] left-5 rounded-lg shadow-primary shadow-md flex-col"
+    >
+      {/* <div className="absolute -right-14 cursor-pointer top-1/2 -rotate-90 uppercase font-medium text-primary">
+        Open sidebar
+      </div> */}
       <header className="shadow-inner shadow-primary">
         <div className="relative my-8 mx-auto w-40 h-40 rounded-full overflow-hidden border-2 border-primary select-none">
           <Image
             alt="Avatar"
             fill
-            src={'/avatar.png'}
+            src={'/avatar.jpg'}
             className="object-cover -z-50"
             priority
           />

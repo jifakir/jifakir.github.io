@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import dayjs, { Dayjs } from 'dayjs';
 import { Button } from '.';
 import { motion, animate, useMotionValue, useTransform } from 'framer-motion';
+import Title from './Title';
 
 const AnimatedNumber = ({
   number,
@@ -22,7 +23,7 @@ const AnimatedNumber = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <h2 className="text-5xl font-bold text-white/80 inline-block">
+    <h2 className="text-3xl md:text-5xl font-bold text-white/80 inline-block">
       <motion.span>{animatedNumber}</motion.span>
       {suffix}
     </h2>
@@ -32,17 +33,9 @@ const AnimatedNumber = ({
 const About = () => {
   return (
     <>
-      <h2 className="relative text-5xl font-bold text-white/90 uppercase mx-auto">
-        About Me
-        <span className="absolute whitespace-nowrap font-bold -left-[70px] top-5 text-7xl uppercase text-white/5 -z-50">
-          About Me
-        </span>
-        <span className="absolute left-1/2 -translate-x-1/2 top-[110%] w-28 inline-block bg-primary/50 rounded-full h-1 overflow-hidden">
-          <span className="absolute w-10 h-full bg-primary" />
-        </span>
-      </h2>
-      <div className="mt-20 flex ">
-        <div className="flex-1 pr-10">
+      <Title title="About Me" />
+      <div className="mt-20 md:flex">
+        <div className="flex-1 md:pr-10">
           <div className="">
             <h3 className="text-3xl font-bold text-white/90">
               👋 Hello there! I&apos;m{' '}
@@ -57,7 +50,7 @@ const About = () => {
             of my projects, ensuring durability and maintainability.`}
           </p>
         </div>
-        <div className="pl-10 w-1/3 divide-y divide-secondary/40 text-secondary font-medium text-base">
+        <div className="md:pl-10 md:w-1/3 divide-y divide-secondary/40 text-secondary font-medium text-base">
           <div className="py-3">
             <span>Name:</span>
             <span className=" pl-2">Jahidul Islam Fakir</span>
@@ -86,18 +79,18 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-between mt-16 divide-x divide-secondary/40">
-        <div className="text-center text-secondary w-full">
+      <div className="flex flex-col md:flex-row justify-between mt-16 md:mt-auto divide-y md:divide-x divide-secondary/40">
+        <div className="text-center text-secondary w-full pb-5 md:pb-0">
           <AnimatedNumber number={3} suffix="+" />
-          <p className="text-lg font-medium">Years Experiance</p>
+          <p className=" text-lg font-medium">Years Experiance</p>
         </div>
-        <div className="text-center text-secondary w-full">
+        <div className="text-center text-secondary w-full py-5 md:py-0">
           <AnimatedNumber number={15} suffix="+" />
-          <p className="text-lg font-medium">Happy Clients</p>
+          <p className=" text-lg font-medium">Happy Clients</p>
         </div>
-        <div className="text-center text-secondary w-full">
+        <div className="text-center text-secondary w-full pt-5 md:pt-0">
           <AnimatedNumber number={35} suffix="+" />
-          <p className="text-lg font-medium">Projects Done</p>
+          <p className=" text-lg font-medium">Projects Done</p>
         </div>
       </div>
       {/* <p className="">

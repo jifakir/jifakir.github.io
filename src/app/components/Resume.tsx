@@ -90,7 +90,7 @@ const servicesData = [
 
 const Resume = () => {
   return (
-    <>
+    <div className="mt-20 md:mt-0">
       <Title title="Expertise" />
       <h3 className="mt-20 text-3xl font-bold text-white/90">
         👋 I&apos;m <span className="text-primary">skilled</span> in,
@@ -111,7 +111,7 @@ const Resume = () => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

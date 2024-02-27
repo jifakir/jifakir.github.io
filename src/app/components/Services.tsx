@@ -32,9 +32,9 @@ const servicesData = [
 
 const Services = () => {
   return (
-    <>
+    <div className="mt-20 md:mt-auto">
       <Title title="What I Do" shadowTitle="Services" />
-      <div className="mt-20 grid grid-cols-2 gap-10">
+      <div className="mt-20 md:grid grid-cols-2 gap-10">
         {servicesData.map((service, idx) => (
           <div key={idx + 'skills'} className="flex gap-5">
             <div className="w-20 h-20 rounded-lg border-primary/40 text-primary text-5xl border shadow-sm shadow-primary bg-white/5 backdrop-blur-xl flex justify-center items-center">
@@ -49,7 +49,7 @@ const Services = () => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

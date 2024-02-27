@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { AnimatePresence, Reorder, motion } from 'framer-motion';
 import Title from './Title';
@@ -8,16 +8,17 @@ import { MdOutlineClose } from 'react-icons/md';
 import { LinkSquare, Maximize } from 'iconsax-react';
 import PortfolioItem from './PortfolioItem';
 import { ProjectTypes, projectCategories, projects } from '../data/projects';
+import Portal from './common/Portal';
 
 const Portfolio = () => {
   const [selectedCat, setSelectedCat] = useState(0);
   const [selectedItem, setItem] = useState<ProjectTypes | null>(null);
   const [frameLoading, setLoading] = useState(false);
   return (
-    <>
+    <div className="mt-20 md:mt-auto">
       <Title title="Portfolio" />
-      <div className="mt-20 min-h-[58vh]">
-        <div className="flex justify-center items-center">
+      <div className="mt-10 min-h-[58vh]">
+        <div className="pl-20 flex justify-center items-center overflow-x-auto">
           {projectCategories?.map((cat, idx) => (
             <div
               key={`categories_${idx}`}
@@ -25,7 +26,7 @@ const Portfolio = () => {
               className="px-5"
             >
               <h5
-                className={`relative font-bold cursor-pointer ${
+                className={`relative font-bold cursor-pointer whitespace-nowrap ${
                   selectedCat === cat.id ? 'text-primary' : 'text-white'
                 }`}
               >
@@ -40,10 +41,10 @@ const Portfolio = () => {
             </div>
           ))}
         </div>
-        <ul className="grid grid-cols-3 gap-5 mt-10">
+        <ul className="md:grid grid-cols-3 gap-5 mt-10 space-y-5 md:space-y-0">
           <AnimatePresence>
             {projects
-              // .slice(0, 6)
+              .slice(0, 6)
               .filter((itm) => itm.categoryId.includes(selectedCat))
               .map((itm, idx) => (
                 <PortfolioItem
@@ -55,8 +56,8 @@ const Portfolio = () => {
               ))}
           </AnimatePresence>
         </ul>
-        {selectedItem?.id &&
-          createPortal(
+        {selectedItem?.id && (
+          <Portal>
             <AnimatePresence>
               <motion.div
                 // onClick={() => setItem(null)}
@@ -91,11 +92,11 @@ const Portfolio = () => {
                   ) : null}
                 </div>
               </motion.div>
-            </AnimatePresence>,
-            document.body
-          )}
+            </AnimatePresence>
+          </Portal>
+        )}
       </div>
-    </>
+    </div>
   );
 };
 
