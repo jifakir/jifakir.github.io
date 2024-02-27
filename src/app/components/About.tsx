@@ -34,7 +34,7 @@ const About = () => {
   return (
     <>
       <Title title="About Me" />
-      <div className="mt-20 md:flex">
+      <div className="mt-20 xl:flex">
         <div className="flex-1 md:pr-10">
           <div className="">
             <h3 className="text-3xl font-bold text-white/90">
@@ -50,7 +50,7 @@ const About = () => {
             of my projects, ensuring durability and maintainability.`}
           </p>
         </div>
-        <div className="md:pl-10 md:w-1/3 divide-y divide-secondary/40 text-secondary font-medium text-base">
+        <div className="xl:pl-10 xl:w-1/3 divide-y divide-secondary/40 text-secondary font-medium text-base">
           <div className="py-3">
             <span>Name:</span>
             <span className=" pl-2">Jahidul Islam Fakir</span>
@@ -79,7 +79,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row justify-between mt-16 md:mt-auto divide-y md:divide-x divide-secondary/40">
+      <div className="flex flex-col md:flex-row justify-between mt-16 md:mt-auto divide-y md:divide-y-0 md:divide-x divide-secondary/40">
         <div className="text-center text-secondary w-full pb-5 md:pb-0">
           <AnimatedNumber number={3} suffix="+" />
           <p className=" text-lg font-medium">Years Experiance</p>

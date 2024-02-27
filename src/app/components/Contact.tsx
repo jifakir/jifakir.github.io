@@ -124,10 +124,10 @@ const Contact = () => {
   ));
 
   return (
-    <div className="mt-20 md:mt-auto">
+    <div className="mt-20 md:mt-0">
       <Title title="Get in Touch" />
-      <div className="mt-10 md:mt-[4.5rem] 2xl:mt-20 md:flex items-center gap-10">
-        <div className="md:w-2/3 space-y-5">
+      <div className="mt-10 md:mt-[4.5rem] 2xl:mt-20 lg:flex items-center gap-10">
+        <div className="lg:w-2/3 space-y-5">
           <div className="flex items-center gap-5 bg-white/5 px-5 py-3 rounded-lg">
             <div className="w-20 h-20 rounded-lg border-primary/40 text-primary text-4xl border shadow-sm shadow-primary bg-white/5 backdrop-blur-xl flex justify-center items-center">
               <Mobile />
@@ -177,7 +177,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="w-full mt-10 md:mt-auto">
+        <div className="w-full mt-10 lg:mt-auto">
           <h2 className="text-lg font-bold text-white mb-2">Get In Touch</h2>
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
             {buildForm}

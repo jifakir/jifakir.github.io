@@ -7,7 +7,7 @@ import { useMediaQuery } from 'react-responsive';
 
 export default function Home() {
   const searchParams = useSearchParams();
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 920px)' });
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 765px)' });
 
   const search = searchParams.get('screen');
 

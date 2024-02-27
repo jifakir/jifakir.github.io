@@ -41,7 +41,7 @@ const Portfolio = () => {
             </div>
           ))}
         </div>
-        <ul className="md:grid grid-cols-3 gap-5 mt-10 space-y-5 md:space-y-0">
+        <ul className="md:grid grid-cols-2 xl:grid-cols-3 gap-5 mt-10 space-y-5 md:space-y-0">
           <AnimatePresence>
             {projects
               .slice(0, 6)
