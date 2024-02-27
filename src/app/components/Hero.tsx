@@ -53,7 +53,13 @@ const Hero = () => {
       and maintainability. Best of luck with your portfolio!
     </p> */}
       <div className="flex justify-center">
-        <Button>Hire Me</Button>
+        <a
+          href="https://www.linkedin.com/in/jifakir/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button>Hire Me</Button>
+        </a>
       </div>
     </div>
   );
